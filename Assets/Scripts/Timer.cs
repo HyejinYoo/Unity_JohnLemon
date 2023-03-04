@@ -17,15 +17,12 @@ public class Timer : MonoBehaviour
 
     void Start()
     {
-        //transform.Find("").gameObject;
         Timetxt = GameObject.Find("TimeText").GetComponent<Text>();
         Timetxt.text = "0.00";
-        //sw.Start();
     }
 
     void Update()
     {
-        //Exit = GameObject.Find("GameEnding").GetComponent<GameEnding>().m_IsPlayerAtExit;
         if (!Stop)
         {
             m_Timer = m_Timer + Time.deltaTime;

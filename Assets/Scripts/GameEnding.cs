@@ -47,12 +47,8 @@ public class GameEnding : MonoBehaviour
 
     void Update()
     {
-
-        //UnityEngine.Debug.Log("foreach : " + sw.ElapsedMilliseconds + " ms");
         if (m_IsPlayerAtExit)
         {
-            //timer.TimerStop();
-            //timer.sw.Stop();
             timer.stopTimer();
             EndLevel(exitBackgroundImageCanvasGroup, false, exitAudio);
                  
@@ -85,14 +81,10 @@ public class GameEnding : MonoBehaviour
             }
             else
             {
-
-
                 if (!m_ShowTime)
                 {
                     exitTime.text = GameObject.Find("Timer").GetComponent<Timer>().Timetxt.text;
                     float exitTimef = float.Parse(exitTime.text);
-
-                    //exitTime.text = timer.Timetxt.text;
 
                     if (PlayerPrefs.HasKey("Shortest"))
                     {
@@ -114,8 +106,6 @@ public class GameEnding : MonoBehaviour
                     m_ShowTime = true;
                 }
                 
-
-                //Application.Quit();
             }
         }
     }

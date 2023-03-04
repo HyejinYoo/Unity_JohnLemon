@@ -9,6 +9,5 @@ public class Restart : MonoBehaviour
     {
         UnityEngine.Debug.Log("click");
         SceneManager.LoadScene(0);
-
     }
 }
