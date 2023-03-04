@@ -7,10 +7,7 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public GameEnding gameEnding;
     public Text Timetxt;
-    public Stopwatch sw = new Stopwatch();
-
 
     float m_Timer = 0;
     static bool Stop = false;

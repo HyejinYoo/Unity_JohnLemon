@@ -5,8 +5,9 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float turnSpeed = 20f;
-    public float moveSpeed;
     public GameObject Name;
+
+    public float m_MoveSpeed = 1;
 
     Animator m_Animator;
     Rigidbody m_Rigidbody;
@@ -54,8 +55,12 @@ public class PlayerMovement : MonoBehaviour
 
     void OnAnimatorMove()
     {
-        m_Rigidbody.MovePosition(m_Rigidbody.position + m_Movement * m_Animator.deltaPosition.magnitude * moveSpeed);
+        m_Rigidbody.MovePosition(m_Rigidbody.position + m_Movement * m_Animator.deltaPosition.magnitude * m_MoveSpeed);
         m_Rigidbody.MoveRotation(m_Rotation);
     }
 
+    public void SpeedUp()
+    {
+        m_MoveSpeed = m_MoveSpeed + (1/2);
+    } 
 }
