@@ -99,7 +99,7 @@ public class GameEnding : MonoBehaviour
                         string shortestText = PlayerPrefs.GetString("Shortest");
                         float shortestf = float.Parse(shortestText);
 
-                        UnityEngine.Debug.Log(shortestText + "?" + exitTime.text);
+                        UnityEngine.Debug.Log(shortestText + " " + exitTime.text);
                         if (exitTimef < shortestf)
                         {
                             PlayerPrefs.SetString("Shortest", exitTime.text);
@@ -115,7 +115,7 @@ public class GameEnding : MonoBehaviour
                 }
                 
 
-                Application.Quit();
+                //Application.Quit();
             }
         }
     }
